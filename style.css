@@ -1,0 +1,23 @@
+body {
+  margin: 20px;
+  padding: 0;
+  background-color: #333;
+}
+
+.container {
+  width: 760px;
+  margin: auto;
+  border: 3px white solid;
+  background-color: #fff;
+}
+
+.main-image img,
+.images img {
+  width: 100%;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
