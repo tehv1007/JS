@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Exchange Rate App</title>
+  </head>
+  <body>
+    <h1>Exchange Rate App</h1>
+    <p>Choose currency and amounts to get the exchange rate</p>
+
+    <div class="container">
+      <div class="currency">
+        <select name="" id="currency-1">
+          <option value="AED">AED 아랍에미리트</option>
+          <option value="AUD">AUD 호주</option>
+          <option value="BDT">BDT 방글라데시</option>
+          <option value="BHD">BHD 바레인</option>
+          <option value="BND">BND 브루나이</option>
+          <option value="BRL">BRL 브라질</option>
+          <option value="CAD">CAD 캐나다</option>
+          <option value="CHF">CHF 스위스</option>
+          <option value="CLP">CLP 칠레</option>
+          <option value="CNY">CNY 중국</option>
+          <option value="CZK">CZK 체코</option>
+          <option value="DKK">DKK 덴마크</option>
+          <option value="EGP">EGP 이집트</option>
+          <option value="EUR">EUR 유럽연합</option>
+          <option value="GBP">GBP 영국</option>
+          <option value="HKD">HKD 홍콩</option>
+          <option value="HUF">HUF 헝가리</option>
+          <option value="IDR">IDR 인도네시아</option>
+          <option value="ILS">ILS 이스라엘</option>
+          <option value="INR">INR 인도</option>
+          <option value="JOD">JOD 요르단</option>
+          <option value="JPY">JPY 일본</option>
+          <option value="KRW">KRW 대한민국</option>
+          <option value="KWD">KWD 쿠웨이트</option>
+          <option value="KZT">KZT 카자흐스탄</option>
+          <option value="MNT">MNT 몽골</option>
+          <option value="MOP">MOP 마카오</option>
+          <option value="MXN">MXN 멕시코</option>
+          <option value="MYR">MYR 말레이시아</option>
+          <option value="NOK">NOK 노르웨이</option>
+          <option value="NPR">NPR 네팔</option>
+          <option value="NZD">NZD 뉴질랜드</option>
+          <option value="OMR">OMR 오만</option>
+          <option value="PHP">PHP 필리핀</option>
+          <option value="PKR">PKR 파키스탄</option>
+          <option value="PLN">PLN 폴란드</option>
+          <option value="QAR">QAR 카타르</option>
+          <option value="RUB">RUB 러시아</option>
+          <option value="SAR">SAR 사우디아라비아</option>
+          <option value="SEK">SEK 스웨덴</option>
+          <option value="SGD">SGD 싱가포르</option>
+          <option value="THB">THB 태국</option>
+          <option value="TRY">TRY 터키</option>
+          <option value="TWD">TWD 대만</option>
+          <option value="USD" selected>USD 미국</option>
+          <option value="VND">VND 베트남</option>
+          <option value="ZAR">ZAR 남아프리카 공화국</option>
+        </select>
+        <input type="number" id="amount-1" placeholder="0" value="1" />
+      </div>
+
+      <div class="swap-container">
+        <button class="button" id="button">Swap</button>
+        <div class="rate" id="rate"></div>
+      </div>
+
+      <div class="currency">
+        <select id="currency-2">
+          <option value="AED">AED 아랍에미리트</option>
+          <option value="AUD">AUD 호주</option>
+          <option value="BDT">BDT 방글라데시</option>
+          <option value="BHD">BHD 바레인</option>
+          <option value="BND">BND 브루나이</option>
+          <option value="BRL">BRL 브라질</option>
+          <option value="CAD">CAD 캐나다</option>
+          <option value="CHF">CHF 스위스</option>
+          <option value="CLP">CLP 칠레</option>
+          <option value="CNY">CNY 중국</option>
+          <option value="CZK">CZK 체코</option>
+          <option value="DKK">DKK 덴마크</option>
+          <option value="EGP">EGP 이집트</option>
+          <option value="EUR">EUR 유럽연합</option>
+          <option value="GBP">GBP 영국</option>
+          <option value="HKD">HKD 홍콩</option>
+          <option value="HUF">HUF 헝가리</option>
+          <option value="IDR">IDR 인도네시아</option>
+          <option value="ILS">ILS 이스라엘</option>
+          <option value="INR">INR 인도</option>
+          <option value="JOD">JOD 요르단</option>
+          <option value="JPY">JPY 일본</option>
+          <option value="KRW">KRW 대한민국</option>
+          <option value="KWD">KWD 쿠웨이트</option>
+          <option value="KZT">KZT 카자흐스탄</option>
+          <option value="MNT">MNT 몽골</option>
+          <option value="MOP">MOP 마카오</option>
+          <option value="MXN">MXN 멕시코</option>
+          <option value="MYR">MYR 말레이시아</option>
+          <option value="NOK">NOK 노르웨이</option>
+          <option value="NPR">NPR 네팔</option>
+          <option value="NZD">NZD 뉴질랜드</option>
+          <option value="OMR">OMR 오만</option>
+          <option value="PHP">PHP 필리핀</option>
+          <option value="PKR">PKR 파키스탄</option>
+          <option value="PLN">PLN 폴란드</option>
+          <option value="QAR">QAR 카타르</option>
+          <option value="RUB">RUB 러시아</option>
+          <option value="SAR">SAR 사우디아라비아</option>
+          <option value="SEK">SEK 스웨덴</option>
+          <option value="SGD">SGD 싱가포르</option>
+          <option value="THB">THB 태국</option>
+          <option value="TRY">TRY 터키</option>
+          <option value="TWD">TWD 대만</option>
+          <option value="USD">USD 미국</option>
+          <option value="VND" selected>VND 베트남</option>
+          <option value="ZAR">ZAR 남아프리카 공화국</option>
+        </select>
+        <input type="number" id="amount-2" placeholder="0" />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

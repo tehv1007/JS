@@ -1,0 +1,74 @@
+:root {
+  --primary-color: #5fbaa7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.currency {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.currency select {
+  padding: 10px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid var(--primary-color);
+}
+
+.currency input {
+  border: 0;
+  font-size: 32px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.swap-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.rate {
+  color: var(--primary-color);
+  padding: 0 10px;
+}
+
+select:focus,
+input:focus {
+  outline: 0;
+}
