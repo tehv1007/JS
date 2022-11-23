@@ -43,14 +43,12 @@ function pauseSong() {
 // Next song
 function nextSong() {
   {
-    //   if (songIndex < songs.length - 1) {
-    //     songIndex += 1;
-    //   } else {
-    //     songIndex = 0;
-    //   }
-    //   flag = true;
-    songIndex++;
-    if (songIndex > songs.length - 1) songIndex = 0;
+    if (songIndex < songs.length - 1) {
+      songIndex += 1;
+    } else {
+      songIndex = 0;
+    }
+    flag = true;
 
     loadSong(songs[songIndex]);
     playSong();
@@ -59,14 +57,12 @@ function nextSong() {
 
 // Prev song
 function prevSong() {
-  //   if (songIndex > 0) {
-  //     songIndex -= 1;
-  //   } else {
-  //     songIndex = songs.length - 1;
-  //   }
-  //   flag = true;
-  songIndex--;
-  if (songIndex < 0) songIndex = songs.length - 1;
+  if (songIndex > 0) {
+    songIndex -= 1;
+  } else {
+    songIndex = songs.length - 1;
+  }
+  flag = true;
 
   loadSong(songs[songIndex]);
   playSong();
@@ -93,12 +89,12 @@ function setProgress(event) {
 
 // Event handlers
 playBtn.addEventListener("click", () => {
-  //   flag == false ? playSong() : pauseSong();
-  //   flag = !flag;
-  //   console.log(flag);
-  const isPlaying = musicContainer.classList.contains("play");
-  isPlaying ? pauseSong() : playSong();
-  console.log(isPlaying);
+  flag == false ? playSong() : pauseSong();
+  flag = !flag;
+  console.log(flag);
+  //   const isPlaying = musicContainer.classList.contains("play");
+  //   isPlaying ? pauseSong() : playSong();
+  //   console.log(isPlaying);
 });
 
 document.body.addEventListener("keydown", (event) => {
@@ -106,7 +102,8 @@ document.body.addEventListener("keydown", (event) => {
   console.log(event);
 
   if (event.code === "Space") {
-    isPlaying ? pauseSong() : playSong();
+    flag ? pauseSong() : playSong();
+    flag = !flag;
   }
 });
 
