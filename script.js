@@ -22,17 +22,20 @@ function addZero(number) {
 function showBackground() {
   const hour = new Date().getHours();
   if (hour < 12) {
-    body.style.backgroundImage = "url(./images/img1.jpg)";
+    body.style.backgroundImage =
+      "url(https://images.unsplash.com/photo-1600245892018-3826141b0822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)";
     body.style.backgroundSize = "cover";
     body.style.backgroundPosition = "center";
     greeting.innerHTML = "Good morning, ";
   } else if (hour < 18) {
-    body.style.backgroundImage = "url(./images/img2.jpg)";
+    body.style.backgroundImage =
+      "url(https://images.unsplash.com/photo-1622653533660-a1538fe8424c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)";
     body.style.backgroundSize = "cover";
     body.style.backgroundPosition = "center";
     greeting.innerHTML = "Good afternoon, ";
   } else {
-    body.style.backgroundImage = "url(./images/img3.jpg)";
+    body.style.backgroundImage =
+      "url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)";
     body.style.backgroundSize = "cover";
     body.style.backgroundPosition = "center";
     greeting.innerHTML = "Good night, ";
